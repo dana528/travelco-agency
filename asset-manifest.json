@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/travelco-agency/static/css/main.351467a8.css",
+    "main.js": "/travelco-agency/static/js/main.b99f2d04.js",
+    "static/js/453.abd36b29.chunk.js": "/travelco-agency/static/js/453.abd36b29.chunk.js",
+    "index.html": "/travelco-agency/index.html",
+    "main.351467a8.css.map": "/travelco-agency/static/css/main.351467a8.css.map",
+    "main.b99f2d04.js.map": "/travelco-agency/static/js/main.b99f2d04.js.map",
+    "453.abd36b29.chunk.js.map": "/travelco-agency/static/js/453.abd36b29.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.351467a8.css",
+    "static/js/main.b99f2d04.js"
+  ]
+}
