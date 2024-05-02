@@ -15,7 +15,6 @@ const Routs = () => {
       <Route path='/:userId' element={<EmailVerification /> } />
       <Route path='/:userId/login' element={<Main /> } /> 
       <Route path="/:userId/:email" element={<UserProfile /> } />
-      <Route path='/' element={<Home />} />
       
     </Routes>
   );
