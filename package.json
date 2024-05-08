@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "homepage": "./",
+=======
+  "homepage": "http://dana528.github.io",
+>>>>>>> 1dd78365c06931030f257ceb2cd0d7c78843dcbd
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
