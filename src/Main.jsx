@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate , useLocation} from 'react-router-dom';
 import { db } from './firebase';
-import './emailVerification.css';
-import FormInput from "./components/FormInput";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -86,80 +84,79 @@ const inputs = [
     };
     
     return (
-      <div className='bg-slate-900 py-10 min-h-screen grid place-items-center'>
-        <header className="w-full bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 fixed top-0 z-10">
-          <nav className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-            <a  className="flex items-center">
-              {/* <img src="./images/travelco.png" className="mr-3 h-6 sm:h-9" alt="logo" /> */}
-              <strong class="self-center text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
-              {/* text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 */}
-                Travelco Agency</strong>
-            </a>
-            <div className="flex items-center lg:order-2">
-              <a className="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-blue-500 focus:outline-none dark:focus:ring-gray-800"
-              onClick={() => navigate(`/${userIdFromLink}/login`)}>
-                Log in</a>
-            </div>
-            <div className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
-              <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                {/* Add your menu items here */}
-              </ul>
-            </div>
-          </nav>
-        </header>
+    
 
-     
-        {/* <form onSubmit={handleSubmit}>
-      <h1>Please Enter your Email to continue</h1>
-        {inputs.map((input) => (
-          <FormInput
-            key={input.id}
-            {...input}
-            value={values[input.name]}
-            onChange={onChange}
-          />
-        ))}
-        <button className="btn" type="submit">Verify</button>
-      </form> */}
-
-<section>
-  <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-  <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white "> 
-          Enter your Email to Continue
-        </h1>
-
-      <div >
-        <form class="dark:bg-gray-800 dark:border-gray-700 space-y-3 md:space-y-6 py-4 px-7" onSubmit={handleSubmit}>
-          
-            <input onChange={onChange} 
-            type="email" 
-            name="email" 
-            id="email" 
-            value = {values.email}
-            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
-            placeholder="Your email" 
-            required="" />
-          
-          <div class="flex items-center justify-between">
-            <div class="flex items-start">
-              <div class="flex items-center h-5">
-                <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="" />
-              </div>
-              <div class="ml-3 text-sm">
-                <label for="remember" class="text-gray-500 dark:text-gray-300">Remember me</label>
-              </div>
-            </div>
-          </div>
-          <button type="submit" class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">verify</button>
-        </form>
+      <div className='w-full h-screen'>
+  <img
+    className='absolute top-0 left-0 w-full h-full object-cover'
+    src='https://img.freepik.com/free-photo/island-sea-with-plane-wing_1339-517.jpg?t=st=1714939577~exp=1714943177~hmac=4a42605cf12595b43cf2544da7919c7b0b0a267a14a530a8cf7be82a73313004&w=1060'
+    alt='/'
+  />
+ 
+ <header className="w-full bg-transparent px-4 lg:px-6 py-2.5 fixed top-0 z-10 transition-shadow duration-300 hover:shadow-lg">
+  <nav className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl h-10">
+      <a className="flex items-center">
+        <strong className="self-center text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 text-white">
+          Travelco Agency
+        </strong>
+      </a>
+      <div className="flex items-center lg:order-2">
+        <a className="text-white text-gray-800 dark:text-white hover:bg-black hover:text-white focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-purple-900 focus:outline-none dark:focus:ring-gray-800"
+          onClick={() => navigate(`/${userIdFromLink}/login`)}>
+          Log in
+        </a>
       </div>
-    </div>
+    </nav>
+  </header>
 
+
+  <section className="absolute inset-0 flex items-center justify-center transition-shadow duration-300 hover:shadow-lg bg-black bg-opacity-30">
+  <div className="max-w-md mx-auto bg-white bg-opacity-30 dark:bg-gray-800 dark:bg-opacity-30 rounded-lg shadow-lg p-8">
+    <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white md:text-2xl">
+      Enter your Email to Continue
+    </h1>
+    <form onSubmit={handleSubmit} className="space-y-3 md:space-y-6 py-4 px-7 bg-black bg-opacity-0">
+      <input
+        onChange={onChange}
+        type="email"
+        name="email"
+        id="email"
+        value={values.email}
+        className="bg-gray-50 bg-opacity-0 border border-white text-white dark:bg-gray-700 dark:bg-opacity-50 dark:border-white dark:text-white dark:placeholder-white focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 rounded-lg"
+        placeholder="Your email"
+        required
+      />
+      <div className="flex items-center justify-between">
+        <div className="flex items-start">
+          <div className="flex items-center h-5">
+            <input
+              id="remember"
+              aria-describedby="remember"
+              type="checkbox"
+              className="w-4 h-4 border border-gray-300 rounded bg-gray-50 bg-opacity-50 dark:bg-gray-700 dark:bg-opacity-50 dark:border-gray-600 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-3 focus:ring-primary-300"
+              
+            />
+          </div>
+          <div className="ml-3 text-sm">
+            <label htmlFor="remember" className="text-white dark:white">Remember me</label>
+          </div>
+        </div>
+      </div>
+      <button
+        type="submit"
+        className="w-full text-white bg-purple-900 hover:bg-purple-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+      >
+        Verify
+      </button>
+    </form>
+  </div>
 </section>
 
-<ToastContainer />
 
-        </div>
+
+  <ToastContainer />
+</div>
+
        
     
     );

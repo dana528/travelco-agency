@@ -128,9 +128,9 @@ const handleDownloadDocument = (documentUrl) => {
         setIsModalOpen(!isModalOpen);
     };
     
-
     const generateLink = (userId) => {
-        return `http://localhost:3000/${userId}`;
+        const baseUrl = 'http://localhost:3000 ';
+        return `${baseUrl}/${userId}`;
     };
 
     const handleCopyLink = (userId) => {
@@ -248,41 +248,40 @@ const handleDownloadDocument = (documentUrl) => {
     <div className="modal-container dark:bg-gray-800 dark:border-gray-700 space-y-3 md:space-y-6 py-9 px-30">
         <div >
             <form onSubmit={addNewUser}  className="dark:bg-gray-800 dark:border-gray-700 space-y-3 md:space-y-6 py-9 px-30">
-            <button className="close-button" onClick={() => setIsModalOpen(false)}>
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="icon icon-tabler icon-tabler-x"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="#000000"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <line x1="18" y1="6" x2="6" y2="18" />
-                    <line x1="6" y1="6" x2="18" y2="18" />
-                </svg>
-            </button>
+                <button className="close-button" onClick={() => setIsModalOpen(false)}>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="icon icon-tabler icon-tabler-x"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        strokeWidth="1.5"
+                        stroke="#000000"
+                        fill="none"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                    >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
                 
-                    <label htmlFor="fullName"
+                <label htmlFor="fullName"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >Full Name</label>
-                    <input
-                        type="text"
-                        placeholder="Full Name"
-                        value={fullname}
-                        required
-                        className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        onChange={(e) => setFullName(e.target.value)}
-
-                    />
+                >Full Name</label>
+                <input
+                    type="text"
+                    placeholder="Full Name"
+                    value={fullname}
+                    required
+                    className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    onChange={(e) => setFullName(e.target.value)}
+                />
                 
                 <div className="box">
                     <label htmlFor="email" 
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
                     <input
                         type="email"
                         name='email'

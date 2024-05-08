@@ -103,7 +103,7 @@ const inputs = [
                 navigate(`/${userIdFromLink}/${values.email}`);
             } else {
                 // If it doesn't match, show an error message or handle it accordingly
-                alert('Email does not match the user ID.');
+                alert('Incorrect Email Address.');
             }
         } catch (error) {
             console.error('Error fetching user data:', error);

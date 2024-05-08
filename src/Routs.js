@@ -5,17 +5,18 @@ import Home from './Home';
 import UserProfile from './UserProfile';
 import EmailVerification from './EmailVerification';
 import Main from './Main';
+import Admin from './Admin';
+import User from './User'
 
 
 
 const Routs = () => {
   return (
     <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/:userId' element={<EmailVerification /> } />
-      <Route path='/:userId/login' element={<Main /> } /> 
-      <Route path="/:userId/:email" element={<UserProfile /> } />
-      
+      <Route path="/:userId/login" element={<Main />} />
+      <Route path="/:userId/:email" element={<UserProfile />} />
+      <Route path="/:userId" element={< User/>} />
+      <Route path="/" element={<Admin />} />
     </Routes>
   );
 }
